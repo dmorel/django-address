@@ -5,7 +5,8 @@ $(function(){
 	var fmtd = $('input[name="' + self.attr('name') + '_formatted"]');
         self.geocomplete({
             details: cmps,
-            detailsAttribute: 'data-geo'
+            detailsAttribute: 'data-geo',
+            types: []   
         }).change(function(){
 	    if(self.val() != fmtd.val()) {
 		var cmp_names = ['country', 'country_code', 'locality', 'postal_code',
